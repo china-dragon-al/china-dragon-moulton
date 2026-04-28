@@ -47,8 +47,11 @@ china-dragon-moulton/
 │   └── assets/            # Other assets (fonts, etc.)
 ├── LICENSE                # MIT License
 ├── README.md              # This file
+├── SECURITY.md            # Security & privacy guidelines
+├── ACCESSIBILITY_COMPLIANCE.md  # ADA compliance documentation
 ├── WEBSITE_PLAN.md        # Detailed planning document
-└── RESTAURANT_INFO.md     # Restaurant information reference
+├── RESTAURANT_INFO.md     # Restaurant information reference
+└── .gitignore             # Files to exclude from git
 ```
 
 ## 🚀 Deployment
@@ -196,11 +199,34 @@ Update phone/address in all HTML files' footers and contact sections.
 
 ## 🔒 Security
 
-- HTTPS enforced
-- No user data collection (except Google Maps)
-- No cookies (except Google Maps)
-- No external scripts
-- Content Security Policy ready
+### Protected Information
+
+This repository uses a comprehensive `.gitignore` to protect sensitive information. See [SECURITY.md](SECURITY.md) for full details.
+
+**Never commit:**
+- API keys and credentials
+- Database files
+- Payment information
+- Personal identifiable information (PII)
+- Environment variables (`.env` files)
+- SSL certificates and security files
+
+**Safe to commit:**
+- Public website files (HTML, CSS, JS)
+- Documentation
+- Non-sensitive configuration
+- Legal documents
+
+### Security Best Practices
+
+- ✅ All secrets excluded via `.gitignore`
+- ✅ HTTPS enforced on production
+- ✅ No user data collection
+- ✅ No external scripts (except Google Maps)
+- ✅ Content Security Policy ready
+- ✅ Regular security audits recommended
+
+For detailed security guidelines, see [SECURITY.md](SECURITY.md).
 
 ## 📞 Support
 

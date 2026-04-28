@@ -80,3 +80,129 @@ dist/
 build/
 *.min.js
 *.min.css
+
+# Node modules (if using npm/yarn)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Sensitive Information - NEVER COMMIT THESE
+*.key
+*.pem
+*.p12
+*.pfx
+*.cer
+*.crt
+secrets.json
+credentials.json
+config.local.*
+.secrets
+.credentials
+
+# API Keys and Tokens
+*api_key*
+*apikey*
+*secret_key*
+*access_token*
+*auth_token*
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+
+# Payment/Financial Data
+*payment*
+*stripe*
+*paypal*
+*credit_card*
+
+# Personal Information
+*ssn*
+*social_security*
+*tax_id*
+*ein*
+
+# Backup files
+*.backup
+*.old
+*.orig
+*.save
+
+# Cache directories
+.cache/
+.parcel-cache/
+.npm/
+.eslintcache
+.stylelintcache
+
+# Testing
+coverage/
+.nyc_output/
+*.lcov
+
+# Documentation drafts (keep final docs)
+drafts/
+notes.txt
+TODO.txt
+NOTES.md
+
+# Local server files
+.htaccess.local
+.htpasswd
+
+# Git merge files
+*.orig
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*_BACKUP_*.txt
+*_BASE_*.txt
+*_LOCAL_*.txt
+*_REMOTE_*.txt
+
+# Compressed files (unless needed)
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Large media files (add specific ones if needed)
+*.mov
+*.mp4
+*.avi
+*.wmv
+*.flv
+
+# System files
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# IDE specific
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.settings/
+
+# Temporary test files
+test-*.html
+test-*.css
+test-*.js
+scratch.*
