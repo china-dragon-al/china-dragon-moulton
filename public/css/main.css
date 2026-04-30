@@ -1,6 +1,5 @@
 /* ===================================
    China Dragon Restaurant - Modern Mixed Theme
-   Inspired by aribbq.com
    =================================== */
 
 /* CSS Variables */
@@ -238,20 +237,39 @@ header {
     letter-spacing: 1px;
     min-width: 44px;
     min-height: 44px;
-    border-radius: 4px;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left var(--transition-normal);
+    z-index: -1;
+}
+
+.btn:hover::before {
+    left: 100%;
 }
 
 .btn-primary {
-    background-color: var(--primary-red);
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
     color: var(--white);
-    box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+    box-shadow: var(--shadow-md);
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-    background-color: var(--dark-red);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(211, 47, 47, 0.4);
+    background: linear-gradient(135deg, var(--dark-red) 0%, var(--primary-red) 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(200, 16, 46, 0.4);
 }
 
 .btn-secondary {
@@ -264,6 +282,8 @@ header {
 .btn-secondary:focus {
     background-color: var(--white);
     color: var(--primary-red);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
 }
 
 /* Sections */
@@ -302,7 +322,24 @@ header {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 1rem;
-    font-weight: 800;
+    font-weight: 700;
+    color: var(--primary-red);
+    letter-spacing: -1px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--primary-red), transparent);
+    border-radius: 2px;
 }
 
 .section-subtitle {
@@ -329,6 +366,22 @@ header {
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
+}
+
+.image-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    transition: transform var(--transition-slow);
+}
+
+.image-section:hover::before {
+    transform: scale(1.05);
 }
 
 /* Individual Image Section Backgrounds */
@@ -361,17 +414,34 @@ header {
     color: var(--white);
     max-width: 800px;
     padding: 2rem;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .image-section-content h2 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.8);
+    font-weight: 700;
+    letter-spacing: -1px;
 }
 
 .image-section-content p {
     font-size: 1.5rem;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+    font-weight: 300;
 }
 
 /* Grid Layouts */
@@ -392,21 +462,31 @@ header {
 .card {
     background: var(--white);
     padding: 2.5rem;
-    border-radius: 8px;
-    box-shadow: var(--box-shadow);
-    transition: var(--transition);
-    border: 1px solid #E0E0E0;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-red);
+}
+
+.card h3 {
+    transition: color var(--transition-fast);
+}
+
+.card:hover h3 {
+    color: var(--primary-red);
 }
 
 /* Dish Cards with Images */
 .dish-card {
     padding: 0;
     overflow: hidden;
+    position: relative;
 }
 
 .dish-image {
@@ -414,6 +494,12 @@ header {
     height: 250px;
     object-fit: cover;
     display: block;
+    border-radius: 16px 16px 0 0;
+    transition: transform var(--transition-slow);
+}
+
+.dish-card:hover .dish-image {
+    transform: scale(1.05);
 }
 
 .dish-card h3,
@@ -433,12 +519,13 @@ header {
     color: var(--primary-red);
     margin-bottom: 1rem;
     font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .card p {
     color: var(--text-gray);
     font-size: 1.05rem;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 .section-dark .card {
