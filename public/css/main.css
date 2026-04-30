@@ -169,7 +169,7 @@ header {
 .hero {
     height: 100vh;
     min-height: 700px;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
                 url('../images/china-dragon-moulton-photo.jpeg');
     background-size: cover;
     background-position: center;
@@ -210,10 +210,11 @@ header {
 
 .hero p {
     font-size: 1.75rem;
-    color: var(--gold);
+    color: var(--white);
     margin-bottom: 3rem;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
-    font-weight: 500;
+    font-weight: 400;
+    opacity: 0.95;
 }
 
 .hero-buttons {
@@ -331,19 +332,28 @@ header {
 }
 
 /* Individual Image Section Backgrounds */
-.image-section:nth-of-type(2) {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+.image-section-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
                 url('../images/china-dragon-inside.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-.image-section:nth-of-type(4) {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+.image-section-2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
                 url('../images/china-dragon-inside-2.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-.image-section:nth-of-type(7) {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+.image-section-3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
                 url('../images/china-dragon-outside.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .image-section-content {
@@ -451,10 +461,11 @@ header {
 
 /* Contact Bar */
 .contact-bar {
-    background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
+    background: linear-gradient(135deg, #2C2C2C, #1F1F1F);
     padding: 1.75rem 2rem;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-top: 3px solid var(--primary-red);
 }
 
 .contact-info {
