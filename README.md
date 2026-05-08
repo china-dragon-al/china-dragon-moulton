@@ -11,7 +11,7 @@ China Dragon Restaurant has been serving authentic Chinese cuisine to Moulton, A
 
 **Restaurant Information:**
 - **Address:** 15301 Court St, Moulton, AL 35650
-- **Phone:** (256) 668-7847
+- **Phone:** (256) 974-3788 or (256) 974-3796
 - **Hours:** Monday, Wednesday-Sunday: 11:00 AM - 9:00 PM (Closed Tuesday)
 - **Services:** Dine-in and Takeout
 - **Rating:** 4.4 stars
@@ -234,7 +234,7 @@ For detailed security guidelines, see [SECURITY.md](SECURITY.md).
 ## 📞 Support
 
 For website issues or questions:
-- **Restaurant Phone:** (256) 668-7847
+- **Restaurant Phone:** (256) 974-3788 or (256) 974-3796
 - **GitHub Issues:** [Create an issue](https://github.com/china-dragon-al/china-dragon-moulton/issues)
 
 ## 🤝 Contributing
