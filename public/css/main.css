@@ -361,27 +361,10 @@ header {
     height: 600px;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    overflow: hidden;
-}
-
-.image-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: inherit;
-    transition: transform var(--transition-slow);
-}
-
-.image-section:hover::before {
-    transform: scale(1.05);
 }
 
 /* Individual Image Section Backgrounds */
@@ -390,7 +373,6 @@ header {
                 url('../images/china-dragon-inside.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 
 .image-section-2 {
@@ -398,7 +380,6 @@ header {
                 url('../images/china-dragon-inside-2.jpeg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 
 .image-section-3 {
@@ -406,7 +387,6 @@ header {
                 url('../images/china-dragon-outside.jpeg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 
 .image-section-content {
@@ -491,8 +471,9 @@ header {
 
 .dish-image {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+    height: 300px;
+    object-fit: cover !important;
+    object-position: center;
     display: block;
     border-radius: 16px 16px 0 0;
     transition: transform var(--transition-slow);
@@ -500,6 +481,21 @@ header {
 
 .dish-card:hover .dish-image {
     transform: scale(1.05);
+}
+
+/* Position buffet image to show top (buffet food, not floor) */
+.buffet-image {
+    object-position: center top !important;
+}
+
+/* Dine-in image - normal display like other images */
+.dine-in-image {
+    /* Uses default dish-image styling (cover, no rotation) */
+}
+
+/* Takeout image - normal display (no scaling) */
+.takeout-image {
+    /* Uses default dish-image styling */
 }
 
 .dish-card h3,

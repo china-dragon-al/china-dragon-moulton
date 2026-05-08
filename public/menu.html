@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'">
     <meta name="description" content="China Dragon Restaurant Menu - Authentic Chinese cuisine including appetizers, entrees, fried rice, lo mein, and more. Moulton, AL">
     <meta name="keywords" content="Chinese menu, Chinese food, Moulton restaurant menu, takeout menu">
     <title>Menu - China Dragon Restaurant</title>
@@ -31,10 +32,80 @@
             <h1 class="section-title">Our Menu</h1>
             <p class="section-subtitle">All dishes are prepared fresh to order. Call <a href="tel:+12569743788">(256) 974-3788</a> or <a href="tel:+12569743796">(256) 974-3796</a> to place your order!</p>
             
-            <p style="text-align: center; color: var(--medium-gray); margin-bottom: 3rem;">
+            <!-- PDF Menu Download Button -->
+            <div style="text-align: center; margin: 2rem 0;">
+                <a href="images/china-dragon-menu.pdf" target="_blank" class="btn btn-primary" style="font-size: 1.125rem; padding: 1rem 2rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+                    📄 View Full Menu PDF
+                </a>
+                <p style="margin-top: 0.5rem; color: var(--medium-gray); font-size: 0.875rem;">Download or print our complete menu</p>
+            </div>
+            
+            <p style="text-align: center; color: var(--medium-gray); margin-bottom: 1rem;">
                 <strong>Note:</strong> Prices may vary. Please call for current pricing and availability.<br>
                 <span class="spicy-indicator">🌶️</span> = Spicy dish
             </p>
+            
+            <!-- Allergy Warning -->
+            <div style="text-align: center; margin: 1.5rem auto 3rem; padding: 1rem; background-color: #fff3cd; border: 2px solid #ffc107; border-radius: var(--border-radius); max-width: 800px;">
+                <p style="margin: 0; color: #856404; font-weight: 600;">
+                    ⚠️ <strong>ALLERGY NOTICE:</strong> Our dishes may contain or come into contact with common allergens including wheat, soy, eggs, peanuts, tree nuts, fish, shellfish, and sesame. Please inform us of any food allergies when ordering.
+                </p>
+            </div>
+
+            <!-- Buffet -->
+            <div class="menu-category">
+                <h2 id="buffet">🍽️ Buffet</h2>
+                <p style="padding: 0 1rem; color: var(--medium-gray); font-size: 1.125rem; font-weight: 600;">All-you-can-eat buffet with a wide selection of dishes</p>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Lunch Buffet</div>
+                            <div class="menu-item-description">Monday - Saturday, 11:00 AM - 3:00 PM</div>
+                        </div>
+                        <div class="menu-item-price">$10.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Dinner Buffet</div>
+                            <div class="menu-item-description">Monday - Saturday, 4:00 PM - 9:00 PM</div>
+                        </div>
+                        <div class="menu-item-price">$12.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Sunday Buffet</div>
+                            <div class="menu-item-description">All day Sunday</div>
+                        </div>
+                        <div class="menu-item-price">$12.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Kids 3-5</div>
+                            <div class="menu-item-description">Children ages 3-5</div>
+                        </div>
+                        <div class="menu-item-price">$4.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Kids 6-10 Lunch</div>
+                            <div class="menu-item-description">Children ages 6-10, lunch hours</div>
+                        </div>
+                        <div class="menu-item-price">$5.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Kids 6-10 Dinner</div>
+                            <div class="menu-item-description">Children ages 6-10, dinner hours</div>
+                        </div>
+                        <div class="menu-item-price">$6.99</div>
+                    </div>
+                </div>
+            </div>
 
             <!-- Appetizers -->
             <div class="menu-category">
@@ -42,58 +113,106 @@
                 <div class="menu-items">
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">Egg Roll (1)</div>
-                            <div class="menu-item-description">Crispy roll filled with vegetables and pork</div>
+                            <div class="menu-item-name">1. Egg Roll (1)</div>
+                            <div class="menu-item-description">Crispy roll filled with cabbage and vegetables</div>
                         </div>
-                        <div class="menu-item-price">$2.25</div>
+                        <div class="menu-item-price">$2.00</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">Spring Roll (2)</div>
-                            <div class="menu-item-description">Vegetable spring rolls, served with sweet and sour sauce</div>
+                            <div class="menu-item-name">1A. Shrimp Roll (1)</div>
+                            <div class="menu-item-description">Crispy roll filled with shrimp and vegetables</div>
                         </div>
-                        <div class="menu-item-price">$3.95</div>
+                        <div class="menu-item-price">$2.50</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">Crab Rangoon (6)</div>
-                            <div class="menu-item-description">Crispy wontons filled with cream cheese and crab</div>
+                            <div class="menu-item-name">2. Fried Donut (10)</div>
+                            <div class="menu-item-description">Sweet fried dough balls dusted with sugar</div>
                         </div>
-                        <div class="menu-item-price">$6.95</div>
+                        <div class="menu-item-price">$5.99</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">Fried Wontons (10)</div>
-                            <div class="menu-item-description">Crispy fried wontons served with sweet and sour sauce</div>
+                            <div class="menu-item-name">3. Fried Cheese Wonton (6)</div>
+                            <div class="menu-item-description">Crispy wontons filled with cream cheese</div>
                         </div>
-                        <div class="menu-item-price">$5.95</div>
+                        <div class="menu-item-price">$6.99</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">Chicken Wings (6)</div>
-                            <div class="menu-item-description">Crispy fried chicken wings</div>
+                            <div class="menu-item-name">4. Fried/Steamed Dumplings (8)</div>
+                            <div class="menu-item-description">Pork dumplings served fried or steamed</div>
                         </div>
-                        <div class="menu-item-price">$7.95</div>
+                        <div class="menu-item-price">$8.99</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">Fried Shrimp (6)</div>
-                            <div class="menu-item-description">Breaded and fried shrimp</div>
+                            <div class="menu-item-name">5. Fried Chicken Nuggets (5)</div>
+                            <div class="menu-item-description">Lightly breaded fried chicken bites</div>
                         </div>
-                        <div class="menu-item-price">$8.95</div>
+                        <div class="menu-item-price">$3.99</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">Pot Stickers (6)</div>
-                            <div class="menu-item-description">Pan-fried dumplings filled with pork and vegetables</div>
+                            <div class="menu-item-name">6. Chicken Teriyaki (6)</div>
+                            <div class="menu-item-description">Grilled chicken skewers with teriyaki sauce</div>
                         </div>
-                        <div class="menu-item-price">$7.95</div>
+                        <div class="menu-item-price">$6.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">7. Fried Chicken Wings (8)</div>
+                            <div class="menu-item-description">Crispy seasoned chicken wings</div>
+                        </div>
+                        <div class="menu-item-price">$9.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">8. Teriyaki Beef (4)</div>
+                            <div class="menu-item-description">Grilled beef skewers with teriyaki glaze</div>
+                        </div>
+                        <div class="menu-item-price">$9.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">9. Fried Shrimp (20)</div>
+                            <div class="menu-item-description">Battered and deep-fried shrimp</div>
+                        </div>
+                        <div class="menu-item-price">$8.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">10. Fried Mushroom (15)</div>
+                            <div class="menu-item-description">Battered fried mushrooms</div>
+                        </div>
+                        <div class="menu-item-price">$8.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">11. French Fries</div>
+                            <div class="menu-item-description">Crispy fried potato strips</div>
+                        </div>
+                        <div class="menu-item-price">$2.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">12. Home Fries</div>
+                            <div class="menu-item-description">Seasoned fried potatoes</div>
+                        </div>
+                        <div class="menu-item-price">$6.59</div>
                     </div>
                 </div>
             </div>
@@ -104,26 +223,50 @@
                 <div class="menu-items">
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">Egg Drop Soup</div>
-                            <div class="menu-item-description">Classic Chinese soup with egg ribbons</div>
-                        </div>
-                        <div class="menu-item-price">Small $3.50 | Large $6.50</div>
-                    </div>
-                    
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">Hot and Sour Soup <span class="spicy-indicator">🌶️</span></div>
-                            <div class="menu-item-description">Spicy and tangy soup with tofu and vegetables</div>
-                        </div>
-                        <div class="menu-item-price">Small $3.95 | Large $6.95</div>
-                    </div>
-                    
-                    <div class="menu-item">
-                        <div class="menu-item-info">
                             <div class="menu-item-name">Wonton Soup</div>
                             <div class="menu-item-description">Pork wontons in clear broth</div>
                         </div>
-                        <div class="menu-item-price">Small $3.95 | Large $6.95</div>
+                        <div class="menu-item-price">Small $4.59 | Large $6.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Egg Drop Soup</div>
+                            <div class="menu-item-description">Classic Chinese soup with egg ribbons</div>
+                        </div>
+                        <div class="menu-item-price">Small $4.59 | Large $6.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Hot & Sour Soup <span class="spicy-indicator">🌶️</span></div>
+                            <div class="menu-item-description">Spicy and tangy soup with tofu and vegetables</div>
+                        </div>
+                        <div class="menu-item-price">Small $4.59 | Large $6.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Vegetable Soup</div>
+                            <div class="menu-item-description">Fresh vegetables in savory broth</div>
+                        </div>
+                        <div class="menu-item-price">Small $4.59 | Large $6.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Chicken Noodle Soup</div>
+                            <div class="menu-item-description">Chinese chicken noodle soup</div>
+                        </div>
+                        <div class="menu-item-price">Small $4.59 | Large $6.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">House Special Soup</div>
+                            <div class="menu-item-description">Chef's special soup with assorted ingredients</div>
+                        </div>
+                        <div class="menu-item-price">$9.59</div>
                     </div>
                 </div>
             </div>
@@ -131,41 +274,48 @@
             <!-- Fried Rice -->
             <div class="menu-category">
                 <h2 id="fried-rice">Fried Rice</h2>
-                <p style="padding: 0 1rem; color: var(--medium-gray);">Wok-fried rice with eggs, peas, carrots, and onions</p>
+                <p style="padding: 0 1rem; color: var(--medium-gray);">Wok-fried rice with peas, carrots, and onions • Add fried rice to any dish +$1.50</p>
                 <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Plain Fried Rice</div>
+                        </div>
+                        <div class="menu-item-price">Small $5.59 | Large $7.59</div>
+                    </div>
+                    
                     <div class="menu-item">
                         <div class="menu-item-info">
                             <div class="menu-item-name">Vegetable Fried Rice</div>
                         </div>
-                        <div class="menu-item-price">$8.95</div>
+                        <div class="menu-item-price">Small $6.59 | Large $8.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Roast Pork Fried Rice</div>
+                        </div>
+                        <div class="menu-item-price">Small $7.59 | Large $9.59</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
                             <div class="menu-item-name">Chicken Fried Rice</div>
                         </div>
-                        <div class="menu-item-price">$9.95</div>
-                    </div>
-                    
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">Pork Fried Rice</div>
-                        </div>
-                        <div class="menu-item-price">$9.95</div>
-                    </div>
-                    
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">Beef Fried Rice</div>
-                        </div>
-                        <div class="menu-item-price">$10.95</div>
+                        <div class="menu-item-price">Small $7.59 | Large $9.59</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
                             <div class="menu-item-name">Shrimp Fried Rice</div>
                         </div>
-                        <div class="menu-item-price">$11.95</div>
+                        <div class="menu-item-price">Small $8.59 | Large $10.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Beef Fried Rice</div>
+                        </div>
+                        <div class="menu-item-price">Small $8.59 | Large $10.59</div>
                     </div>
                     
                     <div class="menu-item">
@@ -173,7 +323,7 @@
                             <div class="menu-item-name">House Special Fried Rice</div>
                             <div class="menu-item-description">Chicken, pork, beef, and shrimp</div>
                         </div>
-                        <div class="menu-item-price">$12.95</div>
+                        <div class="menu-item-price">Small $9.59 | Large $10.99</div>
                     </div>
                 </div>
             </div>
@@ -181,41 +331,41 @@
             <!-- Lo Mein -->
             <div class="menu-category">
                 <h2 id="lo-mein">Lo Mein</h2>
-                <p style="padding: 0 1rem; color: var(--medium-gray);">Soft noodles stir-fried with vegetables</p>
+                <p style="padding: 0 1rem; color: var(--medium-gray);">Soft noodles stir-fried with vegetables • Add lo mein to any dish +$2.00</p>
                 <div class="menu-items">
                     <div class="menu-item">
                         <div class="menu-item-info">
                             <div class="menu-item-name">Vegetable Lo Mein</div>
                         </div>
-                        <div class="menu-item-price">$9.95</div>
+                        <div class="menu-item-price">Small $7.59 | Large $9.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Roast Pork Lo Mein</div>
+                        </div>
+                        <div class="menu-item-price">Small $8.59 | Large $10.59</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
                             <div class="menu-item-name">Chicken Lo Mein</div>
                         </div>
-                        <div class="menu-item-price">$10.95</div>
-                    </div>
-                    
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">Pork Lo Mein</div>
-                        </div>
-                        <div class="menu-item-price">$10.95</div>
+                        <div class="menu-item-price">Small $8.59 | Large $10.59</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
                             <div class="menu-item-name">Beef Lo Mein</div>
                         </div>
-                        <div class="menu-item-price">$11.95</div>
+                        <div class="menu-item-price">Small $9.59 | Large $11.59</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
                             <div class="menu-item-name">Shrimp Lo Mein</div>
                         </div>
-                        <div class="menu-item-price">$12.95</div>
+                        <div class="menu-item-price">Small $9.59 | Large $11.59</div>
                     </div>
                     
                     <div class="menu-item">
@@ -223,7 +373,58 @@
                             <div class="menu-item-name">House Special Lo Mein</div>
                             <div class="menu-item-description">Chicken, pork, beef, and shrimp</div>
                         </div>
-                        <div class="menu-item-price">$13.95</div>
+                        <div class="menu-item-price">Small $9.59 | Large $11.59</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mei Fun -->
+            <div class="menu-category">
+                <h2 id="mei-fun">Mei Fun</h2>
+                <p style="padding: 0 1rem; color: var(--medium-gray);">Thin rice noodles stir-fried with vegetables</p>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Roast Pork Mei Fun</div>
+                        </div>
+                        <div class="menu-item-price">$9.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Chicken Mei Fun</div>
+                        </div>
+                        <div class="menu-item-price">$9.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Beef Mei Fun</div>
+                        </div>
+                        <div class="menu-item-price">$11.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Shrimp Mei Fun</div>
+                        </div>
+                        <div class="menu-item-price">$11.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">House Special Mei Fun</div>
+                            <div class="menu-item-description">Chicken, pork, beef, and shrimp</div>
+                        </div>
+                        <div class="menu-item-price">$11.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Singapore Chow Mei Fun</div>
+                            <div class="menu-item-description">Curry-flavored rice noodles with shrimp and pork</div>
+                        </div>
+                        <div class="menu-item-price">$11.99</div>
                     </div>
                 </div>
             </div>
@@ -231,141 +432,118 @@
             <!-- Chicken Dishes -->
             <div class="menu-category">
                 <h2 id="chicken">Chicken Dishes</h2>
-                <p style="padding: 0 1rem; color: var(--medium-gray);">Served with steamed rice or fried rice (+$2)</p>
+                <p style="padding: 0 1rem; color: var(--medium-gray);">All chicken items $12.59 • Served with steamed rice or fried rice (+$1.50)</p>
                 <div class="menu-items">
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">General Tso's Chicken <span class="spicy-indicator">🌶️</span></div>
-                            <div class="menu-item-description">Crispy chicken in sweet and spicy sauce</div>
+                            <div class="menu-item-name">Sweet & Sour Chicken</div>
+                            <div class="menu-item-description">Crispy chicken with sweet and sour sauce</div>
                         </div>
-                        <div class="menu-item-price">$11.95</div>
+                        <div class="menu-item-price">$12.59</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">Sesame Chicken</div>
-                            <div class="menu-item-description">Crispy chicken with sesame seeds in sweet sauce</div>
+                            <div class="menu-item-name">Chicken w. Broccoli</div>
+                            <div class="menu-item-description">Chicken stir-fried with broccoli</div>
                         </div>
-                        <div class="menu-item-price">$11.95</div>
+                        <div class="menu-item-price">$12.59</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">Orange Chicken</div>
-                            <div class="menu-item-description">Crispy chicken in tangy orange sauce</div>
+                            <div class="menu-item-name">Chicken w. Mixed Vegetables</div>
+                            <div class="menu-item-description">Chicken sautéed with mixed vegetables</div>
                         </div>
-                        <div class="menu-item-price">$11.95</div>
+                        <div class="menu-item-price">$12.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Moo Goo Gai Pan</div>
+                            <div class="menu-item-description">Chicken with mushrooms and vegetables in light sauce</div>
+                        </div>
+                        <div class="menu-item-price">$12.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Chicken w. Cashew Nuts</div>
+                            <div class="menu-item-description">Chicken stir-fried with cashews and vegetables</div>
+                        </div>
+                        <div class="menu-item-price">$12.59</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
                             <div class="menu-item-name">Kung Pao Chicken <span class="spicy-indicator">🌶️</span></div>
-                            <div class="menu-item-description">Spicy stir-fried chicken with peanuts and vegetables</div>
+                            <div class="menu-item-description">Spicy chicken with peanuts and vegetables</div>
                         </div>
-                        <div class="menu-item-price">$11.95</div>
+                        <div class="menu-item-price">$12.59</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">Sweet and Sour Chicken</div>
-                            <div class="menu-item-description">Crispy chicken with pineapple and peppers</div>
+                            <div class="menu-item-name">Chicken w. Snow Peas</div>
+                            <div class="menu-item-description">Chicken sautéed with snow peas</div>
                         </div>
-                        <div class="menu-item-price">$11.95</div>
+                        <div class="menu-item-price">$12.59</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">Chicken with Broccoli</div>
-                            <div class="menu-item-description">Tender chicken and fresh broccoli in brown sauce</div>
+                            <div class="menu-item-name">Chicken w. Curry Sauce</div>
+                            <div class="menu-item-description">Chicken cooked in curry sauce</div>
                         </div>
-                        <div class="menu-item-price">$11.95</div>
+                        <div class="menu-item-price">$12.59</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">Chicken with Mixed Vegetables</div>
-                            <div class="menu-item-description">Chicken with assorted fresh vegetables</div>
+                            <div class="menu-item-name">Chicken w. Black Bean Sauce</div>
+                            <div class="menu-item-description">Chicken stir-fried in black bean sauce</div>
                         </div>
-                        <div class="menu-item-price">$11.95</div>
+                        <div class="menu-item-price">$12.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Chicken w. Mushroom</div>
+                            <div class="menu-item-description">Chicken sautéed with mushrooms</div>
+                        </div>
+                        <div class="menu-item-price">$12.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Chicken w. Garlic Sauce <span class="spicy-indicator">🌶️</span></div>
+                            <div class="menu-item-description">Chicken in savory garlic sauce</div>
+                        </div>
+                        <div class="menu-item-price">$12.59</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
                             <div class="menu-item-name">Hunan Chicken <span class="spicy-indicator">🌶️</span></div>
-                            <div class="menu-item-description">Spicy chicken with mixed vegetables</div>
+                            <div class="menu-item-description">Spicy chicken with vegetables in Hunan style</div>
                         </div>
-                        <div class="menu-item-price">$11.95</div>
+                        <div class="menu-item-price">$12.59</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
                             <div class="menu-item-name">Szechuan Chicken <span class="spicy-indicator">🌶️</span></div>
-                            <div class="menu-item-description">Spicy Szechuan-style chicken</div>
+                            <div class="menu-item-description">Spicy chicken with vegetables in Szechuan sauce</div>
                         </div>
-                        <div class="menu-item-price">$11.95</div>
+                        <div class="menu-item-price">$12.59</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">Cashew Chicken</div>
-                            <div class="menu-item-description">Chicken with cashews and vegetables</div>
+                            <div class="menu-item-name">Mongolian Chicken</div>
+                            <div class="menu-item-description">Chicken with onions in savory brown sauce</div>
                         </div>
-                        <div class="menu-item-price">$11.95</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Beef Dishes -->
-            <div class="menu-category">
-                <h2 id="beef">Beef Dishes</h2>
-                <p style="padding: 0 1rem; color: var(--medium-gray);">Served with steamed rice or fried rice (+$2)</p>
-                <div class="menu-items">
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">Beef with Broccoli</div>
-                            <div class="menu-item-description">Tender beef and fresh broccoli in brown sauce</div>
-                        </div>
-                        <div class="menu-item-price">$12.95</div>
-                    </div>
-                    
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">Pepper Steak</div>
-                            <div class="menu-item-description">Beef with bell peppers and onions</div>
-                        </div>
-                        <div class="menu-item-price">$12.95</div>
-                    </div>
-                    
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">Mongolian Beef <span class="spicy-indicator">🌶️</span></div>
-                            <div class="menu-item-description">Spicy beef with scallions and onions</div>
-                        </div>
-                        <div class="menu-item-price">$12.95</div>
-                    </div>
-                    
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">Beef with Mixed Vegetables</div>
-                            <div class="menu-item-description">Beef with assorted fresh vegetables</div>
-                        </div>
-                        <div class="menu-item-price">$12.95</div>
-                    </div>
-                    
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">Hunan Beef <span class="spicy-indicator">🌶️</span></div>
-                            <div class="menu-item-description">Spicy beef with mixed vegetables</div>
-                        </div>
-                        <div class="menu-item-price">$12.95</div>
-                    </div>
-                    
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">Szechuan Beef <span class="spicy-indicator">🌶️</span></div>
-                            <div class="menu-item-description">Spicy Szechuan-style beef</div>
-                        </div>
-                        <div class="menu-item-price">$12.95</div>
+                        <div class="menu-item-price">$12.59</div>
                     </div>
                 </div>
             </div>
@@ -373,30 +551,117 @@
             <!-- Pork Dishes -->
             <div class="menu-category">
                 <h2 id="pork">Pork Dishes</h2>
-                <p style="padding: 0 1rem; color: var(--medium-gray);">Served with steamed rice or fried rice (+$2)</p>
+                <p style="padding: 0 1rem; color: var(--medium-gray);">All pork items $12.59 • Served with steamed rice or fried rice (+$1.50)</p>
                 <div class="menu-items">
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">Sweet and Sour Pork</div>
-                            <div class="menu-item-description">Crispy pork with pineapple and peppers</div>
+                            <div class="menu-item-name">Sweet & Sour Pork</div>
+                            <div class="menu-item-description">Crispy pork with sweet and sour sauce</div>
                         </div>
-                        <div class="menu-item-price">$11.95</div>
+                        <div class="menu-item-price">$12.59</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">Pork with Mixed Vegetables</div>
-                            <div class="menu-item-description">Pork with assorted fresh vegetables</div>
+                            <div class="menu-item-name">Roast Pork w. Garlic Sauce <span class="spicy-indicator">🌶️</span></div>
+                            <div class="menu-item-description">Pork stir-fried in garlic sauce</div>
                         </div>
-                        <div class="menu-item-price">$11.95</div>
+                        <div class="menu-item-price">$12.59</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">Hunan Pork <span class="spicy-indicator">🌶️</span></div>
-                            <div class="menu-item-description">Spicy pork with mixed vegetables</div>
+                            <div class="menu-item-name">Roast Pork w. Broccoli</div>
+                            <div class="menu-item-description">Pork sautéed with broccoli</div>
                         </div>
-                        <div class="menu-item-price">$11.95</div>
+                        <div class="menu-item-price">$12.59</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beef Dishes -->
+            <div class="menu-category">
+                <h2 id="beef">Beef Dishes</h2>
+                <p style="padding: 0 1rem; color: var(--medium-gray);">All beef items $14.99 • Served with steamed rice or fried rice (+$1.50)</p>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Beef w. Broccoli</div>
+                            <div class="menu-item-description">Beef stir-fried with broccoli</div>
+                        </div>
+                        <div class="menu-item-price">$14.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Beef w. Pepper & Onion</div>
+                            <div class="menu-item-description">Beef sautéed with peppers and onions</div>
+                        </div>
+                        <div class="menu-item-price">$14.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Beef w. Mixed Vegetables</div>
+                            <div class="menu-item-description">Beef stir-fried with vegetables</div>
+                        </div>
+                        <div class="menu-item-price">$14.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Beef w. Snow Peas</div>
+                            <div class="menu-item-description">Beef sautéed with snow peas</div>
+                        </div>
+                        <div class="menu-item-price">$14.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Beef w. Mushroom</div>
+                            <div class="menu-item-description">Beef cooked with mushrooms</div>
+                        </div>
+                        <div class="menu-item-price">$14.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Beef w. Garlic Sauce <span class="spicy-indicator">🌶️</span></div>
+                            <div class="menu-item-description">Beef in garlic sauce</div>
+                        </div>
+                        <div class="menu-item-price">$14.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Hunan Beef <span class="spicy-indicator">🌶️</span></div>
+                            <div class="menu-item-description">Spicy beef with vegetables</div>
+                        </div>
+                        <div class="menu-item-price">$14.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Szechuan Beef <span class="spicy-indicator">🌶️</span></div>
+                            <div class="menu-item-description">Beef in spicy Szechuan sauce</div>
+                        </div>
+                        <div class="menu-item-price">$14.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Mongolian Beef</div>
+                            <div class="menu-item-description">Beef with onions in brown sauce</div>
+                        </div>
+                        <div class="menu-item-price">$14.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Hot & Spicy Beef <span class="spicy-indicator">🌶️</span></div>
+                            <div class="menu-item-description">Spicy seasoned beef dish</div>
+                        </div>
+                        <div class="menu-item-price">$14.99</div>
                     </div>
                 </div>
             </div>
@@ -404,77 +669,221 @@
             <!-- Seafood Dishes -->
             <div class="menu-category">
                 <h2 id="seafood">Seafood Dishes</h2>
-                <p style="padding: 0 1rem; color: var(--medium-gray);">Served with steamed rice or fried rice (+$2)</p>
+                <p style="padding: 0 1rem; color: var(--medium-gray);">All seafood items $14.99 • Served with steamed rice or fried rice (+$1.50)</p>
                 <div class="menu-items">
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">Shrimp with Broccoli</div>
-                            <div class="menu-item-description">Shrimp and fresh broccoli in white sauce</div>
+                            <div class="menu-item-name">Sweet & Sour Shrimp</div>
+                            <div class="menu-item-description">Crispy shrimp with sweet and sour sauce</div>
                         </div>
-                        <div class="menu-item-price">$13.95</div>
+                        <div class="menu-item-price">$14.99</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">Shrimp with Mixed Vegetables</div>
-                            <div class="menu-item-description">Shrimp with assorted fresh vegetables</div>
+                            <div class="menu-item-name">Shrimp w. Lobster Sauce</div>
+                            <div class="menu-item-description">Shrimp in savory egg-based lobster sauce</div>
                         </div>
-                        <div class="menu-item-price">$13.95</div>
+                        <div class="menu-item-price">$14.99</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">Kung Pao Shrimp <span class="spicy-indicator">🌶️</span></div>
-                            <div class="menu-item-description">Spicy shrimp with peanuts and vegetables</div>
+                            <div class="menu-item-name">Shrimp w. Broccoli</div>
+                            <div class="menu-item-description">Shrimp stir-fried with broccoli</div>
                         </div>
-                        <div class="menu-item-price">$13.95</div>
+                        <div class="menu-item-price">$14.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Shrimp w. Mixed Vegetables</div>
+                            <div class="menu-item-description">Shrimp sautéed with vegetables</div>
+                        </div>
+                        <div class="menu-item-price">$14.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Shrimp w. Black Bean Sauce</div>
+                            <div class="menu-item-description">Shrimp cooked in black bean sauce</div>
+                        </div>
+                        <div class="menu-item-price">$14.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Shrimp w. Garlic Sauce <span class="spicy-indicator">🌶️</span></div>
+                            <div class="menu-item-description">Shrimp stir-fried in garlic sauce</div>
+                        </div>
+                        <div class="menu-item-price">$14.99</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
                             <div class="menu-item-name">Hunan Shrimp <span class="spicy-indicator">🌶️</span></div>
-                            <div class="menu-item-description">Spicy shrimp with mixed vegetables</div>
+                            <div class="menu-item-description">Spicy shrimp with vegetables</div>
                         </div>
-                        <div class="menu-item-price">$13.95</div>
+                        <div class="menu-item-price">$14.99</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">Sweet and Sour Shrimp</div>
-                            <div class="menu-item-description">Crispy shrimp with pineapple and peppers</div>
+                            <div class="menu-item-name">Szechuan Shrimp <span class="spicy-indicator">🌶️</span></div>
+                            <div class="menu-item-description">Shrimp in spicy Szechuan sauce</div>
                         </div>
-                        <div class="menu-item-price">$13.95</div>
+                        <div class="menu-item-price">$14.99</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Vegetable Dishes -->
+            <!-- Chef Specials -->
             <div class="menu-category">
-                <h2 id="vegetables">Vegetable Dishes</h2>
+                <h2 id="chef-specials">Chef Specials</h2>
                 <p style="padding: 0 1rem; color: var(--medium-gray);">Served with steamed rice or fried rice (+$2)</p>
                 <div class="menu-items">
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">Mixed Vegetables</div>
-                            <div class="menu-item-description">Assorted fresh vegetables in brown sauce</div>
+                            <div class="menu-item-name">Lemon Chicken</div>
+                            <div class="menu-item-description">Crispy chicken with tangy lemon sauce</div>
                         </div>
-                        <div class="menu-item-price">$9.95</div>
+                        <div class="menu-item-price">$13.59</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">Broccoli with Garlic Sauce</div>
-                            <div class="menu-item-description">Fresh broccoli in savory garlic sauce</div>
+                            <div class="menu-item-name">General Tso's Chicken <span class="spicy-indicator">🌶️</span></div>
+                            <div class="menu-item-description">Crispy chicken in sweet and spicy sauce</div>
                         </div>
-                        <div class="menu-item-price">$9.95</div>
+                        <div class="menu-item-price">$13.59</div>
                     </div>
                     
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">Ma Po Tofu <span class="spicy-indicator">🌶️</span></div>
-                            <div class="menu-item-description">Spicy tofu with ground pork</div>
+                            <div class="menu-item-name">Sesame Chicken</div>
+                            <div class="menu-item-description">Crispy chicken with sesame seeds in sweet sauce</div>
                         </div>
-                        <div class="menu-item-price">$10.95</div>
+                        <div class="menu-item-price">$13.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Orange Chicken</div>
+                            <div class="menu-item-description">Crispy chicken in tangy orange sauce</div>
+                        </div>
+                        <div class="menu-item-price">$13.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Honey Chicken</div>
+                            <div class="menu-item-description">Crispy chicken with sweet honey glaze</div>
+                        </div>
+                        <div class="menu-item-price">$13.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">General Tso's Beef <span class="spicy-indicator">🌶️</span></div>
+                            <div class="menu-item-description">Crispy beef in sweet and spicy sauce</div>
+                        </div>
+                        <div class="menu-item-price">$16.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Beef w/ Scallops</div>
+                            <div class="menu-item-description">Tender beef and scallops in brown sauce</div>
+                        </div>
+                        <div class="menu-item-price">$16.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Shrimp w/ Scallops</div>
+                            <div class="menu-item-description">Shrimp and scallops in white sauce</div>
+                        </div>
+                        <div class="menu-item-price">$16.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">General Tso's Shrimp <span class="spicy-indicator">🌶️</span></div>
+                            <div class="menu-item-description">Crispy shrimp in sweet and spicy sauce</div>
+                        </div>
+                        <div class="menu-item-price">$16.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Sesame Shrimp</div>
+                            <div class="menu-item-description">Crispy shrimp with sesame seeds in sweet sauce</div>
+                        </div>
+                        <div class="menu-item-price">$16.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Lake Tung Ting Shrimp</div>
+                            <div class="menu-item-description">Shrimp with vegetables in special sauce</div>
+                        </div>
+                        <div class="menu-item-price">$16.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Salt & Pepper Shrimp</div>
+                            <div class="menu-item-description">Crispy shrimp with salt and pepper seasoning</div>
+                        </div>
+                        <div class="menu-item-price">$16.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Seafood Delight</div>
+                            <div class="menu-item-description">Shrimp, scallops, and crab meat with vegetables</div>
+                        </div>
+                        <div class="menu-item-price">$16.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Happy Family</div>
+                            <div class="menu-item-description">Chicken, beef, shrimp, and pork with vegetables</div>
+                        </div>
+                        <div class="menu-item-price">$16.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Dragon & Phoenix</div>
+                            <div class="menu-item-description">General Tso's chicken and shrimp with vegetables</div>
+                        </div>
+                        <div class="menu-item-price">$16.59</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Four Season</div>
+                            <div class="menu-item-description">Chicken, beef, shrimp, and pork with vegetables</div>
+                        </div>
+                        <div class="menu-item-price">$14.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Triple Delight</div>
+                            <div class="menu-item-description">Chicken, beef, and shrimp with vegetables</div>
+                        </div>
+                        <div class="menu-item-price">$14.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Double Delight</div>
+                            <div class="menu-item-description">Choice of two proteins with vegetables</div>
+                        </div>
+                        <div class="menu-item-price">$14.99</div>
                     </div>
                 </div>
             </div>
@@ -482,53 +891,18 @@
             <!-- Combination Plates -->
             <div class="menu-category">
                 <h2 id="combos">Combination Plates</h2>
-                <p style="padding: 0 1rem; color: var(--medium-gray);">Served with fried rice and egg roll</p>
+                <p style="padding: 0 1rem; color: var(--medium-gray);">All combination plates $12.59 • Served with fried rice and egg roll</p>
                 <div class="menu-items">
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <div class="menu-item-name">2-Item Combo</div>
-                            <div class="menu-item-description">Choose any 2 entrees</div>
+                            <div class="menu-item-name">Combination Plate</div>
+                            <div class="menu-item-description">Choose your favorite entrees</div>
                         </div>
-                        <div class="menu-item-price">$13.95</div>
-                    </div>
-                    
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">3-Item Combo</div>
-                            <div class="menu-item-description">Choose any 3 entrees</div>
-                        </div>
-                        <div class="menu-item-price">$15.95</div>
+                        <div class="menu-item-price">$12.59</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Beverages -->
-            <div class="menu-category">
-                <h2 id="beverages">Beverages</h2>
-                <div class="menu-items">
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">Soft Drinks</div>
-                            <div class="menu-item-description">Coke, Diet Coke, Sprite, Dr Pepper</div>
-                        </div>
-                        <div class="menu-item-price">$2.50</div>
-                    </div>
-                    
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">Sweet Tea / Unsweet Tea</div>
-                        </div>
-                        <div class="menu-item-price">$2.50</div>
-                    </div>
-                    
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <div class="menu-item-name">Hot Tea</div>
-                        </div>
-                        <div class="menu-item-price">$2.00</div>
-                    </div>
-                </div>
-            </div>
 
             <!-- Call to Action -->
             <div style="text-align: center; margin-top: 3rem; padding: 2rem; background-color: var(--light-gray); border-radius: var(--border-radius);">

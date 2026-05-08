@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com https://maps.googleapis.com https://maps.gstatic.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; frame-src https://www.google.com; connect-src 'self'">
     <meta name="description" content="Contact China Dragon Restaurant - Location, hours, and directions. 15301 Court St, Moulton, AL 35650. Call (256) 974-3788 or (256) 974-3796">
     <meta name="keywords" content="China Dragon contact, Moulton restaurant location, Chinese restaurant hours">
     <title>Contact Us - China Dragon Restaurant</title>
@@ -132,8 +133,9 @@
                 <p style="text-align: center; margin-bottom: 2rem;">Located in the heart of Moulton, Alabama</p>
                 
                 <div class="map-container" style="height: 450px;">
-                    <iframe 
+                    <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.8!2d-87.2947!3d34.4833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x888667c8e8e8e8e8%3A0x1234567890abcdef!2s15301%20Court%20St%2C%20Moulton%2C%20AL%2035650!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                        sandbox="allow-scripts allow-same-origin allow-popups"
                         allowfullscreen=""
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"
@@ -191,11 +193,6 @@
                 <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
                 
                 <div style="max-width: 800px; margin: 0 auto;">
-                    <div style="margin-bottom: 1.5rem;">
-                        <h3>Do you offer delivery?</h3>
-                        <p>Currently, we offer dine-in and takeout only. Please call us at <a href="tel:+12569743788">(256) 974-3788</a> or <a href="tel:+12569743796">(256) 974-3796</a> to place your takeout order.</p>
-                    </div>
-                    
                     <div style="margin-bottom: 1.5rem;">
                         <h3>Do you take reservations?</h3>
                         <p>We welcome walk-ins! For large groups, please call ahead so we can prepare for your party.</p>
