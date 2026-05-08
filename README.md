@@ -19,7 +19,7 @@ China Dragon Restaurant has been serving authentic Chinese cuisine to Moulton, A
 ## 🌐 Website
 
 - **Production URL:** https://chinadragonmoulton.com
-- **Repository:** https://github.com/jameshuang/china-dragon-moulton
+- **Repository:** https://github.com/china-dragon-al/china-dragon-moulton
 
 ## ✨ Features
 
@@ -80,7 +80,7 @@ china-dragon-moulton/
      
      Type: CNAME
      Name: www
-     Value: jameshuang.github.io
+     Value: china-dragon-al.github.io
      ```
 
 3. **HTTPS:**
@@ -92,7 +92,7 @@ To view the website locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/jameshuang/china-dragon-moulton.git
+git clone https://github.com/china-dragon-al/china-dragon-moulton.git
 cd china-dragon-moulton
 
 # Serve the docs folder
@@ -235,7 +235,7 @@ For detailed security guidelines, see [SECURITY.md](SECURITY.md).
 
 For website issues or questions:
 - **Restaurant Phone:** (256) 668-7847
-- **GitHub Issues:** [Create an issue](https://github.com/jameshuang/china-dragon-moulton/issues)
+- **GitHub Issues:** [Create an issue](https://github.com/china-dragon-al/china-dragon-moulton/issues)
 
 ## 🤝 Contributing
 
