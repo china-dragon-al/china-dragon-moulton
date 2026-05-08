@@ -172,7 +172,7 @@ header {
                 url('../images/china-dragon-moulton-photo.jpeg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
