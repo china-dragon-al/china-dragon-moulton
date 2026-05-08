@@ -18,8 +18,8 @@ China Dragon Restaurant has been serving authentic Chinese cuisine to Moulton, A
 
 ## 🌐 Website
 
-- **Production URL:** https://chinadragonmoulton.com (or GitHub Pages URL)
-- **Repository:** https://github.com/yourusername/china-dragon-moulton
+- **Production URL:** https://chinadragonmoulton.com
+- **Repository:** https://github.com/jameshuang/china-dragon-moulton
 
 ## ✨ Features
 
@@ -34,7 +34,7 @@ China Dragon Restaurant has been serving authentic Chinese cuisine to Moulton, A
 
 ```
 china-dragon-moulton/
-├── public/                 # Website files (GitHub Pages serves from here)
+├── docs/                   # Website files (GitHub Pages serves from here)
 │   ├── index.html         # Homepage
 │   ├── menu.html          # Menu page
 │   ├── contact.html       # Contact page
@@ -42,9 +42,12 @@ china-dragon-moulton/
 │   ├── terms.html         # Terms of Service
 │   ├── css/
 │   │   └── main.css       # Main stylesheet
-│   ├── js/                # JavaScript files (if needed)
 │   ├── images/            # Image assets
-│   └── assets/            # Other assets (fonts, etc.)
+│   ├── .htaccess          # Apache security headers
+│   ├── robots.txt         # Search engine instructions
+│   ├── sitemap.xml        # Site structure for SEO
+│   └── .well-known/       # Security and verification files
+│       └── security.txt   # Security contact information
 ├── LICENSE                # MIT License
 ├── README.md              # This file
 ├── SECURITY.md            # Security & privacy guidelines
@@ -61,11 +64,11 @@ china-dragon-moulton/
 1. **Enable GitHub Pages:**
    - Go to repository Settings > Pages
    - Source: Deploy from a branch
-   - Branch: `main` / Folder: `/public`
+   - Branch: `main` / Folder: `/docs`
    - Save
 
-2. **Custom Domain (Optional):**
-   - Add `CNAME` file to `public/` folder with your domain
+2. **Custom Domain:**
+   - Add `CNAME` file to `docs/` folder with your domain: `chinadragonmoulton.com`
    - Configure DNS records:
      ```
      Type: A
@@ -77,7 +80,7 @@ china-dragon-moulton/
      
      Type: CNAME
      Name: www
-     Value: yourusername.github.io
+     Value: jameshuang.github.io
      ```
 
 3. **HTTPS:**
@@ -89,19 +92,19 @@ To view the website locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/china-dragon-moulton.git
+git clone https://github.com/jameshuang/china-dragon-moulton.git
 cd china-dragon-moulton
 
-# Serve the public folder
+# Serve the docs folder
 # Option 1: Using Python
-cd public
+cd docs
 python -m http.server 8000
 
 # Option 2: Using Node.js
-npx http-server public -p 8000
+npx http-server docs -p 8000
 
 # Option 3: Using PHP
-cd public
+cd docs
 php -S localhost:8000
 
 # Open browser to http://localhost:8000
@@ -149,8 +152,8 @@ This website is designed to be accessible to all users:
 - **Content:** © 1999-2026 China Dragon Restaurant
 
 ### Legal Pages
-- [Privacy Policy](public/privacy.html) - GDPR/CCPA compliant
-- [Terms of Service](public/terms.html) - Website usage terms
+- [Privacy Policy](docs/privacy.html) - GDPR/CCPA compliant
+- [Terms of Service](docs/terms.html) - Website usage terms
 
 ### Compliance Features
 - Cookie disclosure
@@ -177,15 +180,15 @@ This website is designed to be accessible to all users:
 ## 🔧 Maintenance
 
 ### Updating Menu
-Edit `public/menu.html` to update menu items and prices.
+Edit `docs/menu.html` to update menu items and prices.
 
 ### Updating Hours
 Update hours in:
-- `public/index.html` (homepage)
-- `public/contact.html` (contact page)
-- `public/privacy.html` (footer)
-- `public/terms.html` (footer)
-- `public/menu.html` (footer)
+- `docs/index.html` (homepage)
+- `docs/contact.html` (contact page)
+- `docs/privacy.html` (footer)
+- `docs/terms.html` (footer)
+- `docs/menu.html` (footer)
 
 ### Updating Contact Information
 Update phone/address in all HTML files' footers and contact sections.
@@ -232,7 +235,7 @@ For detailed security guidelines, see [SECURITY.md](SECURITY.md).
 
 For website issues or questions:
 - **Restaurant Phone:** (256) 668-7847
-- **GitHub Issues:** [Create an issue](https://github.com/yourusername/china-dragon-moulton/issues)
+- **GitHub Issues:** [Create an issue](https://github.com/jameshuang/china-dragon-moulton/issues)
 
 ## 🤝 Contributing
 
