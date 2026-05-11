@@ -954,3 +954,253 @@ footer {
 }
 
 /* Made with Bob */
+
+/* ===================================
+   Accessibility Widget Styles
+   =================================== */
+
+/* Accessibility Button */
+.accessibility-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #4A90E2;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+}
+
+.accessibility-button:hover {
+    background: #357ABD;
+    transform: scale(1.1);
+}
+
+.accessibility-button:focus {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+}
+
+/* Accessibility Panel */
+.accessibility-panel {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 360px;
+    max-height: 600px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    z-index: 9998;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.accessibility-panel.active {
+    display: flex;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Panel Header */
+.accessibility-panel-header {
+    background: #4A90E2;
+    color: white;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accessibility-panel-header h2 {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.accessibility-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.accessibility-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.accessibility-close:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+/* Panel Content */
+.accessibility-panel-content {
+    padding: 20px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.accessibility-section {
+    margin-bottom: 24px;
+}
+
+.accessibility-section:last-child {
+    margin-bottom: 0;
+}
+
+.accessibility-section h3 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Control Grid */
+.accessibility-controls {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.accessibility-control {
+    background: #f5f5f5;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 12px 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.accessibility-control:hover {
+    background: #e8e8e8;
+    border-color: #4A90E2;
+}
+
+.accessibility-control:focus {
+    outline: 2px solid #4A90E2;
+    outline-offset: 2px;
+}
+
+.accessibility-control.active {
+    background: #4A90E2;
+    color: white;
+    border-color: #357ABD;
+}
+
+.accessibility-control-icon {
+    font-size: 24px;
+}
+
+.accessibility-control-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* Reset Button */
+.accessibility-reset {
+    width: 100%;
+    padding: 12px;
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 16px;
+}
+
+.accessibility-reset:hover {
+    background: #d32f2f;
+}
+
+.accessibility-reset:focus {
+    outline: 2px solid #d32f2f;
+    outline-offset: 2px;
+}
+
+/* Accessibility Features Applied */
+body.high-contrast {
+    filter: contrast(1.5);
+}
+
+body.grayscale {
+    filter: grayscale(100%);
+}
+
+body.invert-colors {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+body.large-text * {
+    font-size: 1.2em !important;
+    line-height: 1.6 !important;
+}
+
+body.readable-font * {
+    font-family: 'Arial', sans-serif !important;
+}
+
+body.highlight-links a {
+    background: yellow !important;
+    color: black !important;
+    padding: 2px 4px !important;
+}
+
+body.reduce-animations * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .accessibility-panel {
+        width: calc(100vw - 40px);
+        right: 20px;
+        left: 20px;
+        bottom: 90px;
+    }
+    
+    .accessibility-button {
+        bottom: 15px;
+        right: 15px;
+        width: 56px;
+        height: 56px;
+    }
+}
