@@ -307,10 +307,74 @@
                 <p>
                     <a href="privacy.html">Privacy Policy</a>
                     <a href="terms.html">Terms of Service</a>
+                    <a href="accessibility.html">Accessibility</a>
                     <a href="license.html">License</a>
                 </p>
             </div>
         </div>
     </footer>
+
+    <!-- Accessibility Widget -->
+    <button id="accessibility-button" class="accessibility-button" aria-label="Open accessibility options" aria-expanded="false">
+        👁️
+    </button>
+
+    <div id="accessibility-panel" class="accessibility-panel" role="dialog" aria-labelledby="accessibility-title">
+        <div class="accessibility-panel-header">
+            <h2 id="accessibility-title">Accessibility Options</h2>
+            <button id="accessibility-close" class="accessibility-close" aria-label="Close accessibility panel">×</button>
+        </div>
+        <div class="accessibility-panel-content">
+            <div class="accessibility-section">
+                <h3>Visual Adjustments</h3>
+                <div class="accessibility-controls">
+                    <button class="accessibility-control" data-feature="highContrast" role="button" aria-pressed="false" tabindex="0">
+                        <span class="accessibility-control-icon">◐</span>
+                        <span class="accessibility-control-label">High Contrast</span>
+                    </button>
+                    <button class="accessibility-control" data-feature="grayscale" role="button" aria-pressed="false" tabindex="0">
+                        <span class="accessibility-control-icon">⚫</span>
+                        <span class="accessibility-control-label">Grayscale</span>
+                    </button>
+                    <button class="accessibility-control" data-feature="invertColors" role="button" aria-pressed="false" tabindex="0">
+                        <span class="accessibility-control-icon">⚪</span>
+                        <span class="accessibility-control-label">Invert Colors</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="accessibility-section">
+                <h3>Text & Content</h3>
+                <div class="accessibility-controls">
+                    <button class="accessibility-control" data-feature="largeText" role="button" aria-pressed="false" tabindex="0">
+                        <span class="accessibility-control-icon">A+</span>
+                        <span class="accessibility-control-label">Large Text</span>
+                    </button>
+                    <button class="accessibility-control" data-feature="readableFont" role="button" aria-pressed="false" tabindex="0">
+                        <span class="accessibility-control-icon">Aa</span>
+                        <span class="accessibility-control-label">Readable Font</span>
+                    </button>
+                    <button class="accessibility-control" data-feature="highlightLinks" role="button" aria-pressed="false" tabindex="0">
+                        <span class="accessibility-control-icon">🔗</span>
+                        <span class="accessibility-control-label">Highlight Links</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="accessibility-section">
+                <h3>Motion & Animation</h3>
+                <div class="accessibility-controls">
+                    <button class="accessibility-control" data-feature="reduceAnimations" role="button" aria-pressed="false" tabindex="0">
+                        <span class="accessibility-control-icon">⏸</span>
+                        <span class="accessibility-control-label">Reduce Motion</span>
+                    </button>
+                </div>
+            </div>
+
+            <button id="accessibility-reset" class="accessibility-reset">Reset All Settings</button>
+        </div>
+    </div>
+
+    <script src="js/accessibility.js"></script>
 </body>
 </html>
