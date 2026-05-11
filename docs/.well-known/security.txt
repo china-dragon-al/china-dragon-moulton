@@ -2,7 +2,6 @@
 # https://china-dragon-al.github.io/china-dragon-moulton/
 
 Contact: tel:+12569743788
-Contact: tel:+12569743796
 Expires: 2027-05-08T00:00:00.000Z
 Preferred-Languages: en
 Canonical: https://china-dragon-al.github.io/china-dragon-moulton/.well-known/security.txt
@@ -17,5 +16,5 @@ Policy: https://github.com/china-dragon-al/china-dragon-moulton/blob/main/SECURI
 # This is a static website with no backend or database
 # No user data is collected or stored
 # For urgent security issues, please call during business hours:
-# Monday, Wednesday-Sunday: 11:00 AM - 9:00 PM (Central Time)
+# Monday, Wednesday-Sunday: 11:00 AM - 8:30 PM (Central Time)
 # Closed Tuesday
