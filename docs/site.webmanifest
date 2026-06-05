@@ -1,0 +1,18 @@
+{
+  "name": "China Dragon Restaurant",
+  "short_name": "China Dragon",
+  "description": "Authentic Chinese cuisine in Moulton, Alabama. Dine-in, buffet, takeout, and drive-through.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#D32F2F",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
