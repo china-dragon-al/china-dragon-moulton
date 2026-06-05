@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'">
     <meta name="description" content="China Dragon Restaurant Menu - Authentic Chinese cuisine including appetizers, entrees, fried rice, lo mein, and more. Moulton, AL">
     <meta name="keywords" content="Chinese menu, Chinese food, Moulton restaurant menu, takeout menu">
     <title>Menu - China Dragon Restaurant</title>
+    <link rel="canonical" href="https://china-dragon-al.github.io/china-dragon-moulton/menu.html">
+    <meta name="theme-color" content="#D32F2F">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -18,7 +23,12 @@
                 <div class="logo">
                     <a href="index.html">China Dragon</a>
                 </div>
-                <ul class="nav-menu">
+                <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-controls="nav-menu" aria-expanded="false">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="menu.html" aria-current="page">Menu</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -34,10 +44,10 @@
             
             <!-- PDF Menu Download Button -->
             <div style="text-align: center; margin: 2rem 0;">
-                <a href="images/china-dragon-menu.pdf" target="_blank" class="btn btn-primary" style="font-size: 1.125rem; padding: 1rem 2rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+                <a href="images/china-dragon-menu.pdf" target="_blank" rel="noopener" type="application/pdf" aria-label="View the full menu PDF (opens in a new tab)" class="btn btn-primary" style="font-size: 1.125rem; padding: 1rem 2rem; display: inline-flex; align-items: center; gap: 0.5rem;">
                     📄 View Full Menu PDF
                 </a>
-                <p style="margin-top: 0.5rem; color: var(--medium-gray); font-size: 0.875rem;">Download or print our complete menu</p>
+                <p style="margin-top: 0.5rem; color: var(--medium-gray); font-size: 0.875rem;">Opens in a new tab &bull; or scroll down to read the full menu below</p>
             </div>
             
             <p style="text-align: center; color: var(--medium-gray); margin-bottom: 1rem;">

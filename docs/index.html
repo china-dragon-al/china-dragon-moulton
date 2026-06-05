@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com https://www.googletagmanager.com https://maps.googleapis.com https://maps.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.google.com; connect-src 'self' https://www.google-analytics.com">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; frame-src https://www.google.com; connect-src 'self'">
     <meta name="description" content="China Dragon Restaurant in Moulton, Alabama - Serving Moulton's Chinese cuisine for over 25 years. Dine-in and takeout available. Call (256) 974-3788">
     <meta name="keywords" content="Chinese restaurant, Moulton Alabama, Chinese food, takeout, dine-in, China Dragon">
     <meta name="author" content="China Dragon Restaurant">
@@ -21,8 +21,13 @@
     <meta property="twitter:title" content="China Dragon Restaurant - Authentic Chinese Cuisine in Moulton, AL">
     <meta property="twitter:description" content="Serving Moulton's Chinese cuisine for over 25 years. Dine-in and takeout available.">
     <meta property="twitter:image" content="https://china-dragon-al.github.io/china-dragon-moulton/images/china-dragon-outside.jpeg">
-    
+
     <title>China Dragon Restaurant - Authentic Chinese Cuisine in Moulton, AL</title>
+    <link rel="canonical" href="https://china-dragon-al.github.io/china-dragon-moulton/">
+    <meta name="theme-color" content="#D32F2F">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -36,7 +41,12 @@
                 <div class="logo">
                     <a href="index.html" aria-label="China Dragon Restaurant Home">CHINA DRAGON</a>
                 </div>
-                <ul class="nav-menu">
+                <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-controls="nav-menu" aria-expanded="false">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
                     <li><a href="index.html" aria-current="page">Home</a></li>
                     <li><a href="menu.html">Menu</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -115,25 +125,25 @@
                 
                 <div class="grid grid-2">
                     <div class="card dish-card">
-                        <img src="images/food-3.jpg" alt="All-you-can-eat buffet with variety of Chinese dishes" class="dish-image buffet-image">
+                        <img src="images/food-3.jpg" alt="All-you-can-eat buffet with variety of Chinese dishes" class="dish-image buffet-image" loading="lazy" decoding="async" width="600" height="300">
                         <h3>🍽️ All-You-Can-Eat Buffet</h3>
                         <p>Enjoy unlimited servings of fresh, hot Chinese dishes. Perfect for families and groups who want to try a variety of authentic flavors.</p>
                     </div>
                     
                     <div class="card dish-card">
-                        <img src="images/china-dragon-takeout.jpg" alt="Delicious Chinese takeout meal" class="dish-image takeout-image">
+                        <img src="images/china-dragon-takeout.jpg" alt="Delicious Chinese takeout meal" class="dish-image takeout-image" loading="lazy" decoding="async" width="600" height="300">
                         <h3>🥡 Takeout Orders</h3>
                         <p>Call ahead and pick up your favorites. We'll have your food hot, fresh, and ready when you arrive. Perfect for busy families.</p>
                     </div>
                     
                     <div class="card dish-card">
-                        <img src="images/food-1.jpeg" alt="Comfortable dine-in experience" class="dish-image dine-in-image">
+                        <img src="images/food-1.jpeg" alt="Comfortable dine-in experience" class="dish-image dine-in-image" loading="lazy" decoding="async" width="600" height="300">
                         <h3>🪑 Dine-In Service</h3>
                         <p>Relax in our comfortable, family-friendly restaurant. Wheelchair accessible with ample parking for your convenience.</p>
                     </div>
                     
                     <div class="card dish-card">
-                        <img src="images/china-dragon-drive-through.jpg" alt="Drive-through service for quick pickup" class="dish-image">
+                        <img src="images/china-dragon-drive-through.jpg" alt="Drive-through service for quick pickup" class="dish-image" loading="lazy" decoding="async" width="600" height="300">
                         <h3>🚗 Drive-Through</h3>
                         <p>Get your favorite Chinese food without leaving your car. Quick, convenient service for customers on the go.</p>
                     </div>
@@ -236,8 +246,7 @@
                     
                     <div class="map-container">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.8!2d-87.2947!3d34.4833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x888667c8e8e8e8e8%3A0x1234567890abcdef!2s15301%20Court%20St%2C%20Moulton%2C%20AL%2035650!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
-                            sandbox="allow-scripts allow-same-origin allow-popups"
+                            src="https://www.google.com/maps?q=15301+Court+St,+Moulton,+AL+35650&z=15&output=embed"
                             allowfullscreen=""
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"
