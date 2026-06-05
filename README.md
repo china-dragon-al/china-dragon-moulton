@@ -12,7 +12,7 @@ China Dragon Restaurant has been serving authentic Chinese cuisine to Moulton, A
 **Restaurant Information:**
 - **Address:** 15301 Court St, Moulton, AL 35650
 - **Phone:** (256) 974-3788 or (256) 974-3796
-- **Hours:** Monday, Wednesday-Sunday: 11:00 AM - 9:00 PM (Closed Tuesday)
+- **Hours:** Monday, Wednesday-Sunday: 11:00 AM - 8:30 PM (Closed Tuesday)
 - **Services:** Dine-in and Takeout
 - **Rating:** 4.4 stars
 
@@ -23,38 +23,40 @@ China Dragon Restaurant has been serving authentic Chinese cuisine to Moulton, A
 
 ## ✨ Features
 
-- **Responsive Design:** Mobile-first design that works on all devices
-- **Accessibility Compliant:** WCAG 2.1 AA standards
-- **SEO Optimized:** Meta tags and semantic HTML
-- **Legal Compliance:** Privacy Policy, Terms of Service, MIT License
-- **Fast Loading:** Optimized static HTML/CSS
-- **No Dependencies:** Pure HTML/CSS, no frameworks required
+- **Responsive Design:** Mobile-first layout with an accessible hamburger menu; works across phones, tablets, and desktops
+- **Accessibility:** Semantic HTML, ARIA landmarks, skip links, keyboard support, `prefers-reduced-motion`/`prefers-contrast` support, plus an on-page accessibility widget (contrast, grayscale, large text, etc.)
+- **SEO Optimized:** Per-page meta descriptions, canonical URLs, Open Graph/Twitter tags, and an XML sitemap
+- **Installable (PWA-ready):** Web app manifest, favicon, theme color, and apple-touch icon
+- **Legal Compliance:** Privacy Policy, Terms of Service, Accessibility statement, MIT License
+- **Fast Loading:** Static HTML/CSS, lazy-loaded images, no render-blocking third-party assets
+- **Hardened:** Strict per-page Content Security Policy, no third-party trackers, `rel="noopener"` on external links
+- **No Build Step / No Frameworks:** Plain HTML, CSS, and a small amount of vanilla JavaScript
 
 ## 📁 Project Structure
 
 ```
 china-dragon-moulton/
-├── docs/                   # Website files (GitHub Pages serves from here)
-│   ├── index.html         # Homepage
-│   ├── menu.html          # Menu page
-│   ├── contact.html       # Contact page
-│   ├── privacy.html       # Privacy Policy
-│   ├── terms.html         # Terms of Service
+├── docs/                       # Website files (GitHub Pages serves from here)
+│   ├── index.html              # Homepage
+│   ├── menu.html               # Menu page
+│   ├── contact.html            # Contact page (with Google Map)
+│   ├── accessibility.html      # Accessibility statement
+│   ├── privacy.html            # Privacy Policy
+│   ├── terms.html              # Terms of Service
+│   ├── license.html            # License page
+│   ├── 404.html                # Custom "page not found"
 │   ├── css/
-│   │   └── main.css       # Main stylesheet
-│   ├── images/            # Image assets
-│   ├── .htaccess          # Apache security headers
-│   ├── robots.txt         # Search engine instructions
-│   ├── sitemap.xml        # Site structure for SEO
-│   └── .well-known/       # Security and verification files
-│       └── security.txt   # Security contact information
-├── LICENSE                # MIT License
-├── README.md              # This file
-├── SECURITY.md            # Security & privacy guidelines
-├── ACCESSIBILITY_COMPLIANCE.md  # ADA compliance documentation
-├── WEBSITE_PLAN.md        # Detailed planning document
-├── RESTAURANT_INFO.md     # Restaurant information reference
-└── .gitignore             # Files to exclude from git
+│   │   └── main.css            # Main stylesheet
+│   ├── js/
+│   │   └── accessibility.js    # Mobile nav toggle + accessibility widget
+│   ├── images/                 # Image assets (incl. china-dragon-menu.pdf)
+│   ├── favicon.svg             # Site icon
+│   ├── site.webmanifest        # PWA / installable web app manifest
+│   └── sitemap.xml             # Site structure for SEO
+├── LICENSE                     # MIT License
+├── README.md                   # This file
+├── SECURITY.md                 # Security policy
+└── .gitignore                  # Files to exclude from git
 ```
 
 ## 🚀 Deployment
@@ -113,15 +115,15 @@ php -S localhost:8000
 ## 🎨 Design
 
 ### Color Scheme
-- **Primary Red:** #C62828 (Traditional Chinese red)
+- **Primary Red:** #D32F2F (Traditional Chinese red)
 - **Dark Red:** #B71C1C
-- **Gold:** #FFD700 (Prosperity and luck)
+- **Gold:** #FFC107 (Prosperity and luck)
 - **White:** #FFFFFF
-- **Dark Gray:** #333333
+- **Dark Text:** #212121
+- A high-contrast variant is applied automatically when the OS requests `prefers-contrast: high`.
 
 ### Typography
-- **Headings:** Georgia, serif
-- **Body:** System fonts (Apple/Windows/Android native)
+- **All text:** Native system font stack (`-apple-system, Segoe UI, Roboto, …`) for speed and a familiar feel on every platform. No web fonts are loaded.
 
 ### Responsive Breakpoints
 - **Mobile:** < 768px
@@ -165,9 +167,9 @@ This website is designed to be accessible to all users:
 ## 🛠️ Technologies Used
 
 - **HTML5:** Semantic markup
-- **CSS3:** Modern styling with CSS Grid and Flexbox
-- **No JavaScript:** Static site for maximum compatibility
-- **Google Maps:** Embedded location map
+- **CSS3:** Modern styling with CSS Grid, Flexbox, custom properties, and `dvh` units
+- **Vanilla JavaScript:** Progressive enhancement only — the mobile menu toggle and the accessibility widget. The site remains fully readable and navigable with JavaScript disabled.
+- **Google Maps:** Embedded location map (iframe, on the Home and Contact pages)
 
 ## 📱 Browser Support
 
@@ -183,12 +185,15 @@ This website is designed to be accessible to all users:
 Edit `docs/menu.html` to update menu items and prices.
 
 ### Updating Hours
-Update hours in:
-- `docs/index.html` (homepage)
-- `docs/contact.html` (contact page)
+Hours appear in the body and/or footer of several pages. Update all of:
+- `docs/index.html` (hours table + footer)
+- `docs/contact.html` (hours table + footer)
+- `docs/menu.html` (footer + combo note)
+- `docs/accessibility.html` (footer)
 - `docs/privacy.html` (footer)
 - `docs/terms.html` (footer)
-- `docs/menu.html` (footer)
+- `docs/license.html` (footer)
+- `docs/404.html` (footer)
 
 ### Updating Contact Information
 Update phone/address in all HTML files' footers and contact sections.
@@ -224,9 +229,10 @@ This repository uses a comprehensive `.gitignore` to protect sensitive informati
 
 - ✅ All secrets excluded via `.gitignore`
 - ✅ HTTPS enforced on production
-- ✅ No user data collection
-- ✅ No external scripts (except Google Maps)
-- ✅ Content Security Policy ready
+- ✅ No user data collection, cookies, or analytics
+- ✅ No third-party scripts (Google Maps is an embedded iframe, sandboxed by the browser)
+- ✅ Strict Content Security Policy enforced per page (`script-src 'self'`, `object-src 'none'`, etc.)
+- ✅ `rel="noopener"` on all external links
 - ✅ Regular security audits recommended
 
 For detailed security guidelines, see [SECURITY.md](SECURITY.md).
@@ -257,12 +263,25 @@ Restaurant name, logo, and content are © 1999-2026 China Dragon Restaurant. All
 
 ## 📅 Version History
 
+- **v1.1.0** (2026-06-05) - Cross-browser, mobile & hardening update
+  - Fixed fixed-header overlap on inner pages and on mobile
+  - Added an accessible hamburger menu for small screens
+  - Defined missing CSS variables (restored card/button shadows and transitions)
+  - Hero now uses `dvh` to avoid the iOS Safari address-bar jump
+  - Replaced the broken Google Maps embed (placeholder IDs) with a working address-based embed
+  - Added favicon, theme color, apple-touch icon, and a PWA web manifest
+  - Added a custom `404.html`
+  - Per-page canonical URLs; completed and refreshed the sitemap
+  - Hardened the Content Security Policy on every page (removed unused/third-party allowances)
+  - `:focus-visible` focus rings; fixed the "Large Text" accessibility option
+  - Lazy-loaded images with explicit dimensions
+
 - **v1.0.0** (2026-04-28) - Initial release
   - Homepage with hero section
   - Complete menu page
   - Contact page with map
   - Privacy Policy and Terms of Service
-  - Full accessibility compliance
+  - Accessibility statement and on-page widget
   - Mobile responsive design
 
 ---
