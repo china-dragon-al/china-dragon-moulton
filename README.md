@@ -11,14 +11,14 @@ China Dragon Restaurant has been serving authentic Chinese cuisine to Moulton, A
 
 **Restaurant Information:**
 - **Address:** 15301 Court St, Moulton, AL 35650
-- **Phone:** (256) 974-3788 or (256) 974-3796
-- **Hours:** Monday, Wednesday-Sunday: 11:00 AM - 9:00 PM (Closed Tuesday)
+- **Phone:** (256) 974-3788
+- **Hours:** Monday, Wednesday-Sunday: 11:00 AM - 8:30 PM (Closed Tuesday)
 - **Services:** Dine-in and Takeout
 - **Rating:** 4.4 stars
 
 ## 🌐 Website
 
-- **Production URL:** https://chinadragonmoulton.com
+- **Production URL:** https://china-dragon-al.github.io/china-dragon-moulton/
 - **Repository:** https://github.com/china-dragon-al/china-dragon-moulton
 
 ## ✨ Features
@@ -40,8 +40,12 @@ china-dragon-moulton/
 │   ├── contact.html       # Contact page
 │   ├── privacy.html       # Privacy Policy
 │   ├── terms.html         # Terms of Service
+│   ├── accessibility.html # Accessibility statement
+│   ├── license.html       # License page
 │   ├── css/
 │   │   └── main.css       # Main stylesheet
+│   ├── js/
+│   │   └── accessibility.js  # Accessibility widget
 │   ├── images/            # Image assets
 │   ├── .htaccess          # Apache security headers
 │   ├── robots.txt         # Search engine instructions
@@ -50,10 +54,7 @@ china-dragon-moulton/
 │       └── security.txt   # Security contact information
 ├── LICENSE                # MIT License
 ├── README.md              # This file
-├── SECURITY.md            # Security & privacy guidelines
-├── ACCESSIBILITY_COMPLIANCE.md  # ADA compliance documentation
-├── WEBSITE_PLAN.md        # Detailed planning document
-├── RESTAURANT_INFO.md     # Restaurant information reference
+├── SECURITY.md            # Security policy and contact
 └── .gitignore             # Files to exclude from git
 ```
 
@@ -67,8 +68,8 @@ china-dragon-moulton/
    - Branch: `main` / Folder: `/docs`
    - Save
 
-2. **Custom Domain:**
-   - Add `CNAME` file to `docs/` folder with your domain: `chinadragonmoulton.com`
+2. **Custom Domain (optional):**
+   - Add `CNAME` file to `docs/` folder with your domain (e.g. `chinadragonmoulton.com`)
    - Configure DNS records:
      ```
      Type: A
@@ -166,7 +167,7 @@ This website is designed to be accessible to all users:
 
 - **HTML5:** Semantic markup
 - **CSS3:** Modern styling with CSS Grid and Flexbox
-- **No JavaScript:** Static site for maximum compatibility
+- **JavaScript:** Minimal vanilla JS for the accessibility widget only
 - **Google Maps:** Embedded location map
 
 ## 📱 Browser Support
@@ -234,7 +235,7 @@ For detailed security guidelines, see [SECURITY.md](SECURITY.md).
 ## 📞 Support
 
 For website issues or questions:
-- **Restaurant Phone:** (256) 974-3788 or (256) 974-3796
+- **Restaurant Phone:** (256) 974-3788
 - **GitHub Issues:** [Create an issue](https://github.com/china-dragon-al/china-dragon-moulton/issues)
 
 ## 🤝 Contributing

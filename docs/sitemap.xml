@@ -30,6 +30,18 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://china-dragon-al.github.io/china-dragon-moulton/accessibility.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://china-dragon-al.github.io/china-dragon-moulton/license.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
 </urlset>
 
 <!-- Made with Bob -->

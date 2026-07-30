@@ -8,7 +8,6 @@ Allow: /
 Disallow: /.htaccess
 Disallow: /.git/
 Disallow: /admin/
-Disallow: /*.pdf$
 
 # Crawl delay (optional, helps prevent server overload)
 Crawl-delay: 1
